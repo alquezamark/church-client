@@ -1,0 +1,6 @@
+.team-image {
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Keep it equal to make it circular */
+  object-fit: cover; /* Ensures the image fills the circle properly */
+  border: 3px solid white; /* Optional: Adds a border */
+}

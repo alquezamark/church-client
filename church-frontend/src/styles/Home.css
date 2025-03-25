@@ -1,0 +1,85 @@
+.home-container {
+  position: relative;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Background Video */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Dim effect */
+.bg-video::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Dimmed effect for readability */
+  padding: 50px 20px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sections */
+.intro-section,
+.latest-events {
+  position: relative;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.5); /* Dim effect */
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+.event-card {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  transition: transform 0.2s ease-in-out;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+
+/* Carousel Section */
+.carousel-section {
+  margin: 40px auto;
+  max-width: 600px; /* Set a fixed width for smaller size */
+}
+
+.carousel img {
+  width: 100%;
+  height: 300px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensures images fit without distortion */
+  border-radius: 10px;
+}

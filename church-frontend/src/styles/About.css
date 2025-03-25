@@ -1,0 +1,71 @@
+/* About Page Styles */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.about-header {
+  background-image: url("../assets/priscilla-du-preez-nhH1CAzzgj8-unsplash-1210x560.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.about-content {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.about-mission {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 5px solid #007bff;
+  font-style: italic;
+}
+
+.about-team {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 20px;
+  }
+  .about-header {
+    font-size: 1.5rem;
+  }
+  .about-content {
+    font-size: 1rem;
+  }
+}
