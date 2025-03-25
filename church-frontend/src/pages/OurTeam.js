@@ -41,7 +41,7 @@ const OurTeam = () => {
         {team.map((member) => (
           <div key={member._id} className="col-md-4 text-center mb-4">
             <img 
-                    src={`http://localhost:5000${member.image}`} 
+                    src={`https://church-backend-9umb.onrender.com${member.image}`} 
                     alt={member.name} 
                     className="img-fluid rounded-circle team-image" 
                     onError={(e) => e.target.src = "fallback-image.jpg"} 

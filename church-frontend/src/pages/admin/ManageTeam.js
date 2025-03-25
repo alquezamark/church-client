@@ -13,7 +13,7 @@ const ManageTeam = () => {
   fetch("https://church-backend-9umb.onrender.com/api/team")
     .then((response) => response.json())
     .then((data) => {
-      console.log("Fetched team data:", data); // Log the data received
+      console.log("Fetched team data:", data); // Log to check image paths
       setTeam(data);
       setLoading(false);
     })
@@ -108,7 +108,7 @@ const ManageTeam = () => {
               <div className="card p-3 mb-3">
                 <div className="d-flex justify-content-center">
                   <img 
-                    src={`http://localhost:5000${member.image}`} 
+                    src={`https://church-backend-9umb.onrender.com${member.image}`} 
                     alt={member.name} 
                     className="img-fluid rounded-circle team-image" 
                     onError={(e) => e.target.src = "fallback-image.jpg"} 
