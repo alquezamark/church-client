@@ -10,7 +10,7 @@ const ManageTeam = () => {
   const [formData, setFormData] = useState({ name: "", role: "", bio: "", image: null });
 
  useEffect(() => {
-  fetch("http://localhost:5000/api/team")
+  fetch("https://church-backend-9umb.onrender.com/api/team")
     .then((response) => response.json())
     .then((data) => {
       console.log("Fetched team data:", data); // Log the data received
@@ -51,8 +51,8 @@ const ManageTeam = () => {
 
     const method = editingMember ? "PUT" : "POST";
     const url = editingMember
-      ? `http://localhost:5000/api/team/${editingMember._id}`
-      : "http://localhost:5000/api/team";
+      ? `https://church-backend-9umb.onrender.com/api/team/${editingMember._id}`
+      : "https://church-backend-9umb.onrender.com/api/team";
 
     const response = await fetch(url, {
       method,
@@ -73,7 +73,7 @@ const ManageTeam = () => {
 
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this team member?")) {
-      const response = await fetch(`http://localhost:5000/api/team/${id}`, {
+      const response = await fetch(`https://church-backend-9umb.onrender.com/api/team/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });

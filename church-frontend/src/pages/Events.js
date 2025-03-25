@@ -8,7 +8,7 @@ const Events = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await fetch("http://localhost:5000/api/events", {
+      const response = await fetch("https://church-backend-9umb.onrender.com/api/events", {
         headers: { Authorization: token },
       });
 

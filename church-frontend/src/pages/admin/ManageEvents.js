@@ -16,7 +16,7 @@ const ManageEvents = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/events");
+      const response = await fetch("https://church-backend-9umb.onrender.com/api/events");
       if (!response.ok) throw new Error("Failed to fetch events");
 
       const data = await response.json();
@@ -40,7 +40,7 @@ const ManageEvents = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/events", {
+      const response = await fetch("https://church-backend-9umb.onrender.com/api/events", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,7 +78,7 @@ const ManageEvents = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/events/${selectedEvent._id}`,
+        `https://church-backend-9umb.onrender.com/api/events/${selectedEvent._id}`,
         {
           method: "PUT",
           headers: {
@@ -102,7 +102,7 @@ const ManageEvents = () => {
     if (!window.confirm("Are you sure you want to delete this event?")) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/events/${eventId}`, {
+      const response = await fetch(`https://church-backend-9umb.onrender.com/api/events/${eventId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${userToken}`,

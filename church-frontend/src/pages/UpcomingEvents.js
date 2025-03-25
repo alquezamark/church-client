@@ -6,7 +6,7 @@ function UpcomingEvents() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/events") // Replace with actual API URL if different
+    fetch("https://church-backend-9umb.onrender.com/api/events") // Replace with actual API URL if different
       .then((response) => response.json())
       .then((data) => {
         setEvents(data);

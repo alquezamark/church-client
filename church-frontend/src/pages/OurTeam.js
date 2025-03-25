@@ -9,7 +9,7 @@ const OurTeam = () => {
 
   const fetchTeam = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/team");
+      const response = await fetch("https://church-backend-9umb.onrender.com/api/team");
       const data = await response.json();
       
       if (Array.isArray(data)) {

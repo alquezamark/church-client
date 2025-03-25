@@ -7,7 +7,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/events")
+    fetch("https://church-backend-9umb.onrender.com/api/events")
       .then((response) => response.json())
       .then((data) => {
         setEvents(data);

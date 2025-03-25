@@ -16,7 +16,7 @@ const ManagePrograms = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("http://localhost:5000/api/programs", {
+      const response = await fetch("https://church-backend-9umb.onrender.com/api/programs", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -42,7 +42,7 @@ const ManagePrograms = () => {
   const handleAddProgram = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/programs", {
+      const response = await fetch("https://church-backend-9umb.onrender.com/api/programs", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const ManagePrograms = () => {
     if (!window.confirm("Are you sure you want to delete this program?")) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/programs/${id}`, {
+      const response = await fetch(`https://church-backend-9umb.onrender.com/api/programs/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
@@ -96,7 +96,7 @@ const ManagePrograms = () => {
   // Handle update request
   const handleUpdateProgram = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/programs/${editProgram.id}`, {
+      const response = await fetch(`https://church-backend-9umb.onrender.com/api/programs/${editProgram.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
